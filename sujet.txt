@@ -1,0 +1,92 @@
+1. Créer une classe abstraite personne avec les attributs suivants : 
+	nom, prénom 
+	les méthodes : getter and setter sur les attributs 
+	constructeur avec arguments 
+	et une méthode abstraite afficher ()
+
+2. Créer une classe fille de la classe Personne pour Etudiant 
+initial avec un attribut en plus : montant 
+	réaliser la classe Initial dans le fichier : 
+		initial.class.php 
+
+	les méthodes : 
+		construteur avec arguments 
+		getter et setter sur montant 
+		implémenter la méthode afficher pour retourner 
+		une table html avec l'ensemble des attributs. 
+
+3. Faites la même chose avec Alternant et l'attribut en plus est 
+	entreprise. 
+
+4. Faites la même chose avec Professeur et l'attribut en plus est diplome. 
+
+5. Création de la Fabrique 
+Créer une classe FabriquePersonne qui aura comme seule méthode : 
+	- une méthode static avec les arguments nom, prenom, un troisième argument générique, et un quatrième argument type ( qui peut être l'un des types des classes créées)
+
+	cette méthode teste si la classe existe, elle crée un objet de cette classe et retourne l'objet créé. 
+	sinon elle génère une erreur classe inexistante. 
+
+	Pour tester l'existance d'une classe, utilisez la fonction 
+			 class_exists (nom de la classe)
+
+6. créer un fichier index.php pour faire instancier les classes 
+
+Créer des instances des classes : 
+	Initial 
+	Alternant 
+	Professeur 
+	et faites des appels de la méthode afficher ()
+	Essayer de créer une instance d'une classe qui n'existe pas. 
+
+7. Créer la base de données iris_sd avec un héritage Personne --> Initial, Personne-->Alternant, Personne --> Professeur 
+
+8. Créer une classe Singleton pour la connexion en PDO à la base de données 
+
+9. Créer une classe Modele disposant que de méthodes static permettant de : 
+	- avoir la liste des initiaux de la BDD 
+	- avoir la liste des profs de la BDD 
+	- avoir la liste des alternants de la BDD 
+	Donc trois méthodes static 
+
+10. Modifier/Compléter les trois méthodes static du Modele pour retourner un tableau d'instances 
+(Initial, Alternant, Professseur)
+
+
+11. Créer la classe Iris avec trois attributs : 
+	- un tableau des instances Initial 
+	- un tableau des instances Alternant 
+	- un tableau des instances Professeur 
+
+	* dans le construteur, on initialise les tableaux 
+	* écrire une méthode charger qui chargent les instances de la BDD vers les tableaux 
+	* écrire trois méthodes qui affiche les initiaux, les alternants puis les professeurs
+	* insérer dans les tables deux enregistrements par catégorie (Initial, Alternant, Professeur)
+	* Dans l'index.php, instancier Iris et faites appel aux méthodes de chargement et d'affichage 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
